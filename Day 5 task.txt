@@ -1,0 +1,154 @@
+PRINT ODD NUMBERS USING IIFE FUNCTION
+
+(function() {
+  var num = [1, 2, 3, 4, 5, 6, 7, 8, 9,0];
+  var oddnum = num.filter(function(number) {
+    return number % 2 !== 0;
+  });
+  console.log(oddnum);
+})();
+
+PRINT ODD NUMBERS USING ANONYMOUS FUNCTION
+
+var num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var oddnum = num.filter(function(number) {
+  return number % 2 != 0;
+});
+console.log(oddnum);
+
+CAPS STRING ARRAY USING IIFE FUNCTION
+
+(function() {
+    var name = ["logesh", "anitha", "ambi"];
+    var newname = name.map(function(val) {
+      return val.charAt(0).toUpperCase() + val.slice(1);
+    });
+    console.log(newname);
+  })
+  ();
+  
+CAPS STRING ARRAY USING ANONYMOUS FUNCTION
+
+var arr = ["logesh", "anitha", "ambi"];
+var newname = arr.map(function(val) {
+  return val.charAt(0).toUpperCase() + val.slice(1).toLowerCase();
+});
+console.log(newname);
+
+SUM OF ALL NUMBERS IN THE ARRAY IN IIFE FUCTION
+
+(function() {
+    var num = [18,15,22,28,33];
+    var sum = num.reduce(function(a,b) {
+      return a+b;
+    });
+    console.log(sum);
+  })
+  ();
+
+SUM OF ALL NUMBERS IN THE ARRAY IN ANONYMUS FUCTION
+
+var num = [18,15,22,28,53];
+var sum = num.reduce(function(a,b) {
+  return a+b;
+});
+console.log(sum);
+
+PRINT PRIME NUMBER IN IIFE FUNCTION
+
+(function() {
+    var value = [11,13,17,19,22,32,14];
+    var calc = function(num) {
+      for (var i = 2; i < num; i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    };
+    var primenumber = value.filter(calc);
+    console.log(primenumber);
+  })
+  ();
+
+PRINT PRIME NUMBER IN ANONYMOUS FUNCTION
+
+let num = [11,13,17,19,22,32,14];
+let prime = num.filter(function(number) {
+  if (number <= 1) return false;
+  for (let i = 2; i < number; i++) {
+    if (number % i == 0) return false;
+  }
+  return true;
+});
+
+console.log(prime);
+
+PALINDROMES IN IIFE FUNCTION
+
+(function() {
+let arr = ["sathish","madam","radar"];
+let palindrome = [];
+arr.forEach(word => {
+let reversestr = word.split("").reverse().join("");
+if (word === reversestr) {
+palindrome.push(word);
+}
+});
+console.log(palindrome);
+})
+();
+
+PALINDROMES IN ANONYMOUS FUNCTION
+
+var Arr = ["sathish", "madam", "radar"];
+
+var palindrome = Arr.filter(function(string) {
+  return string ===string.split("").reverse().join("");
+});
+
+console.log(palindrome);
+
+
+ARROW FUNCTIONS USING PRINT ODD NUMBERS
+
+
+var num = [18,15,22,28,33];
+const oddNum = num.filter((e, i) => {
+   if(e % 2 != 0) {
+     return e;
+   }
+});
+console.log(oddNum);
+
+
+LITTLE CAPS IN A STRING ARRAY IN ARROW FUNCTIONS
+
+
+var language = ["tamil", "english", "malayalam", "kannadam"];
+
+var capslang = language.map(string => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase());
+
+console.log(capslang);
+
+
+SUM OF ALL NUMBERS IN ARROW FUNCTIONS
+
+var num = [18,15,22,28,33];
+const sum = num.reduce((a,b) => a+b);
+console.log(sum);
+
+
+PRINT PRIME NUMBERS IN ARROW FUNCTIONS
+
+let num = [2,5,6,9,14,13,17,91].filter(n=>{
+for(let i=2; i<n; i++) {
+if(n%i==0) return false;
+}
+return n!=1;
+});
+
+console.log(num);
+
+
+
