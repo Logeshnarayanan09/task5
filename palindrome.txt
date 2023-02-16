@@ -1,0 +1,16 @@
+const input = ["LOGESH","SATHISH","ARUN","MADAM","MALAYALAM","TENET"];
+const outputArr = [];
+const findpalindromes = (value) => {
+const rev = value.split("").reverse().join("");
+if(rev==value){
+outputArr.push(value);
+}
+}
+for(let i=0; i<input.length; i++){
+if(input[i]){
+findpalindrome(input[i])
+}
+}
+console.log(outputArr);
+
+
